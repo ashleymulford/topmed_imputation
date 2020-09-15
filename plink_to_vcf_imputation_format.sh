@@ -6,7 +6,12 @@ for chr in {1..22};
 do plink --bfile filename --chr ${chr} --recode vcf --out filename_${chr};
 done
 
-#GRCh38 requires chromosomes as "chr1" not "1" - convert with awk example:
+#Build 37 requires chromosomes as "1" not "chr1" - convert with awk example:
+for chr in {1..22};
+do awk '{gsub(/^chr/,""); print}' filename_${chr}.vcf > filename_nochr_${chr}.vcf;
+done
+
+#Build 38 requires chromosomes as "chr1" not "1" - convert with awk example:
 for chr in {1..22};
 do awk '{if($0 !~ /^#/) print "chr"$0; else print $0}' filename_${chr}.vcf > filename_chr${chr}.vcf;
 done
