@@ -1,7 +1,6 @@
 #Create VCFs for imputation:
 #Starting with plink files
 
-
 #Convert bed/bim/fam to chr specific VCF files example:
 for chr in {1..22};
 do plink --bfile filename --chr ${chr} --recode vcf --out filename_${chr};
