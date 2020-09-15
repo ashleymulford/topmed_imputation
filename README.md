@@ -1,6 +1,6 @@
 # topmed_imputation
 
-This GitHub provides info on how to run imputation on the topmed server
+This repo provides info on how to run imputation on the topmed server
 - https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/home
 
 
