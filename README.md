@@ -1,7 +1,7 @@
 # topmed_imputation
 
-Info on how to run imputation on the topmed server:
-https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/home
+This GitHub provides info on how to run imputation on the topmed server
+- https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/home
 
 
 ## Required input file format:
