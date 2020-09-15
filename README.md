@@ -12,6 +12,9 @@ This repo provides info on how to run imputation on the topmed server
 - if build 37, chr must be number only (ie 1); if build 38 chr must include "chr" (ie chr1)
 - strand must be consistent, if too many strand flips imputation will fail - see Fix_strand_flip_error for help
 
+#### Steps to convert plinkfiles to properly formatted vcfs:
+
+
 For more info please see:
 - https://topmedimpute.readthedocs.io/en/latest/prepare-your-data/
 - https://www.well.ox.ac.uk/~wrayner/tools/
