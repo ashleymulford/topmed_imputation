@@ -10,10 +10,13 @@ This repo provides info on how to run imputation on the topmed server
 - bgzipped
 - genome build 37 or 38
 - if build 37, chr must be number only (ie 1); if build 38 chr must include "chr" (ie chr1)
-- strand must be consistent, if too many strand flips imputation will fail - see Fix_strand_flip_error for help
+- strand must be consistent, less than 10000 flips
 
 #### Steps to convert plinkfiles to properly formatted vcfs:
+plink_to_vcf_imputation_format
 
+#### Steps to fix strand flip error:
+fix_strand_flip_error
 
 For more info please see:
 - https://topmedimpute.readthedocs.io/en/latest/prepare-your-data/
