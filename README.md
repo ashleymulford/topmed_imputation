@@ -13,6 +13,6 @@ https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/home
 - strand must be consistent, if too many strand flips imputation will fail - see Fix_strand_flip_error for help
 
 For more info please see:
-https://topmedimpute.readthedocs.io/en/latest/prepare-your-data/
-https://www.well.ox.ac.uk/~wrayner/tools/
+- https://topmedimpute.readthedocs.io/en/latest/prepare-your-data/
+- https://www.well.ox.ac.uk/~wrayner/tools/
 
