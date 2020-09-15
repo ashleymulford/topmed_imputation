@@ -1,21 +1,23 @@
 #Create VCFs for imputation:
+#Starting with plink files
 
-#Convert bed/bim/fam to chr specific VCF files:
+
+#Convert bed/bim/fam to chr specific VCF files example:
 for chr in {1..22};
-do plink --bfile ACCOuNTBLACKSfinal_updated --chr ${chr} --recode vcf --out account_blacks_chr${chr}_updated;
+do plink --bfile filename --chr ${chr} --recode vcf --out filename_${chr};
 done
 
-#GRCh38 requires chromosomes as "chr1" not "1" - convert with awk: 
+#GRCh38 requires chromosomes as "chr1" not "1" - convert with awk example:
 for chr in {1..22};
-do awk '{if($0 !~ /^#/) print "chr"$0; else print $0}' account_blacks_chr${chr}_updated.vcf > account_blacks_chrchr${chr}_updated.vcf;
+do awk '{if($0 !~ /^#/) print "chr"$0; else print $0}' filename_${chr}.vcf > filename_chr${chr}.vcf;
 done
 
-#bgzip files:
+#bgzip files example:
 for chr in {1..22};
-do bgzip account_blacks_chrchr${chr}_updated.vcf;
+do bgzip filename_chr${chr}.vcf;
 done
 
-#qc and imputation performed: https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/home
+#qc and imputation performed here: https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/home
 
 #once imputation is complete download and renmae files:
   #go to results for wget command
